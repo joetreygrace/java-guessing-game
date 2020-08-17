@@ -11,8 +11,8 @@ public class GuessingGameApp {
         System.out.println("Welcome to the Guessing Game!");
         System.out.println("You have 3 Guesses");
         System.out.println("Please pick a number between 1-10:");
-        Scanner input = new Scanner(System.in);
-        int numberGuess = input.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int numberGuess = scanner.nextInt();
         int numberOfGuesses = 1;
         for ( ; numberOfGuesses < 3 ; numberOfGuesses++){
             if (numberGuess == randomNumber) {
@@ -27,20 +27,20 @@ public class GuessingGameApp {
             }
             else if (numberGuess == 0) {
                 System.out.println("You have entered 0. Please enter a number between 1-10:");
-                numberGuess = input.nextInt();
+                numberGuess = scanner.nextInt();
             }
             else{
                 if(numberGuess < randomNumber){
                     System.out.println("You guessed " + numberGuess + ":");
                     System.out.println("The correct number is more than " + numberGuess + ":");
                     System.out.println("Guess again. You have " + (3 - numberOfGuesses) + " left:");
-                    numberGuess = input.nextInt();
+                    numberGuess = scanner.nextInt();
                 }
                 else{
                     System.out.println("You guessed " + numberGuess + ":");
                     System.out.println("The correct number is less than " + numberGuess + ":");
                     System.out.println("Guess again. You have " + (3 - numberOfGuesses) + " left:");
-                    numberGuess = input.nextInt();
+                    numberGuess = scanner.nextInt();
                 }
 
 
